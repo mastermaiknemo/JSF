@@ -145,7 +145,7 @@
     </dependencies>
 
     <build>
-        <finalName>Logis2JSF</finalName>
+        <finalName>CompanyJSF</finalName>
         <defaultGoal>install</defaultGoal>
         <plugins>
             <plugin>
