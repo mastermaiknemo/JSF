@@ -1,0 +1,119 @@
+
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:c="http://java.sun.com/jsp/jstl/core"
+xmlns:p="http://primefaces.org/ui"
+xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
+   
+    <h:head>
+    <title>Company</title>
+</h:head>
+
+    <h:body id="numberRange" style="background-color: lightblue">
+
+            
+    <h:messages showDetail="true" showSummary="false"/>
+    
+   <ui:insert name="header" >
+		  <ui:include src="/images/template/menuface.xhtml" />
+		</ui:insert>
+    <br></br>
+    <h3><h:outputText value="Add New Company"/></h3>
+    <h:form id="form">
+    
+    <h:panelGrid   id="grid" width="100%" columns="7"  bgcolor="#F1F1F1" border="10" cellpadding="1" cellspacing="1"  rules="all">
+        
+        <h:outputLabel value="Name" for="context"></h:outputLabel>
+        <h:outputLabel value="Legal form" for="name"></h:outputLabel>
+        <h:outputLabel value="CEO" for="conditions"></h:outputLabel>
+        <h:outputLabel value="Headquater" for="actions"></h:outputLabel>
+        <h:outputLabel value="Industry" for="type"></h:outputLabel>
+        <h:outputLabel value="Website" for="type2"></h:outputLabel>
+
+        <h:outputLabel value="Action" for="action"></h:outputLabel>
+        
+        
+        <h:inputText value="#{companyCompany.name}" id="context" required="true"></h:inputText>
+        <h:inputText value="#{companyCompany.legalform}" id="name"></h:inputText>
+        <h:inputText value="#{companyCompany.ceo}" id="conditions"></h:inputText>
+        <h:inputText value="#{companyCompany.headquater}" id="actions"></h:inputText>
+        <h:inputText value="#{companyCompany.industry}" id="type"></h:inputText>
+        <h:inputText value="#{companyCompany.website}" id="type2"></h:inputText>
+
+        <h:commandButton onclick="if (! confirm('Really save this?') ) { return false;}; return true; " style="background-color:lightgreen;width:130px" value="Save" action="#{companyCompanyDao.save(companyCompany)}" ></h:commandButton>
+        
+    </h:panelGrid>
+           
+</h:form>
+    
+    
+       <h3><h:outputText value="Existing Companies"/></h3>
+          <h:form id="formform2">
+           <h:dataTable value="#{companyCompanyDao.showRange()}" var="item" bgcolor="#F1F1F1" border="10" cellpadding="5" cellspacing="0" width="100%"   rules="all" >
+            
+            <h:column>
+<f:facet name="header">
+<h:outputText value="ID" />
+</f:facet> 
+                <h:outputText  value="#{item.id}" ></h:outputText>
+</h:column>
+            <h:column>
+<f:facet name="header">
+<h:outputText value="Name" />
+</f:facet> 
+                <h:outputText value="#{item.name}" ></h:outputText>
+</h:column>
+            <h:column>
+<f:facet name="header">
+<h:outputText value="Legal form" />
+</f:facet> 
+                <h:outputText  value="#{item.legalform}" ></h:outputText>
+</h:column>
+            <h:column>
+<f:facet name="header">
+<h:outputText value="CEO" />
+</f:facet> 
+                <h:inputText id="a" value="#{item.ceo}" ></h:inputText>
+</h:column>         
+            <h:column>
+<f:facet name="header">
+<h:outputText value="Headquater" />
+</f:facet> 
+                <h:inputText value="#{item.headquater}"></h:inputText>
+</h:column>     
+            <h:column>
+<f:facet name="header">
+    <h:outputText value="Industry" />
+</f:facet> 
+                <h:inputText  value="#{item.industry}" ></h:inputText>
+</h:column>            
+            <h:column>
+<f:facet name="header">
+    <h:outputText value="Website" />
+</f:facet> 
+                <a href="#{item.website}"><h:outputText value="#{item.website}"></h:outputText></a>
+</h:column>
+            
+            <h:column>
+<f:facet name="header">
+<h:outputText value="ACTION" />
+</f:facet> 
+                <h:commandButton onclick="if (! confirm('Really update this?') ) { return false;}; return true; " style="background-color:lightgreen;width:120px" value="Update" action="#{companyCompanyDao.update(item)}" ></h:commandButton>
+                <h:commandButton onclick="if (! confirm('Really delete this?') ) { return false;}; return true; "  style="background-color:#F9C123;width:120px" value="Delete" action="#{companyCompanyDao.delete(item)}" ></h:commandButton>
+</h:column>
+   
+        </h:dataTable>
+    </h:form>   
+
+     
+</h:body>
+    <br></br>
+               <p:editor id="editor" value="#{editorBean.value}" width="1000" height="500"/>  
+   
+</html>

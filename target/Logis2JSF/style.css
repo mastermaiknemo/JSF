@@ -1,0 +1,147 @@
+
+	body, div, ul, li { margin: 0; padding: 0; } 
+	#header { 
+		min-width: 760px; 
+		height:0px;
+	} 
+
+        #ebene1{
+visibility:visible;
+width:100%;
+height:500px;
+background-color:lightblue;
+z-index:6;
+position: absolute;
+overflow:inherit;
+
+}
+#details{
+    visibility: hidden;
+    position:absolute;
+}
+
+#ebene2{
+visibility: hidden;
+width:100%;
+height:500px;
+background-color:lightblue;
+z-index:6;
+position:relative;
+}
+
+#submit {
+ color: #fff;
+ font-size: 0;
+ width: 135px;
+ height: 60px;
+ border: none;
+ margin: 0;
+ padding: 0;
+ background: #0c0 url(images/send-now.gif) 0 0 no-repeat; 
+}
+  #nav {  
+		width: 97%; 
+		background-color: #333; 
+		font-family:"Century Gothic", "HelveticaNeueLT Pro 45 Lt", sans-serif; 
+		float: left; 
+	}
+	#nav li { 
+		list-style: none;
+		float: left; 
+		width: 120px; 
+		height: 30px; 
+		line-height: 30px; 
+		text-align: center;
+	} 
+	#nav li a { 
+		color: white; 
+		text-decoration: none; 
+ 		display: block; 
+		
+	} 
+	#nav li a:hover { 
+		background-color: #066; 
+
+	} 
+
+
+	#nav li ul { 
+		position: absolute;  
+		display: none; 
+
+	} 
+	
+	#nav li:hover ul { 
+		display: block; 
+	} 
+
+		
+	#nav li ul li { 
+		float: none; 
+		display: inline; 
+	}
+	#nav li ul li a { 
+		width: 100px; 
+		position: relative; 
+		
+		border-right: 1px solid black; 
+		border-bottom: 1px solid black; 
+		background: #333; 
+		color: #fff; 
+	}
+	#nav li ul li a:hover { 
+		background: #066; 
+		color: #000; 
+	}
+
+
+	#nav li ul li a:hover { 
+		background: #066; 
+		color: #000; 
+	}
+
+	#numberRange #a a {
+         background: #066; 
+         border-color: #C9453C;
+          cursor: default;
+        }	
+        
+        	#orderGroups #b a {
+         background-color: #E4CB00;
+         background: #066; 
+          cursor: default;
+        }	
+        
+        	#configAction #c a {
+         background-color: #E4CB00;
+         background: #066; 
+          cursor: default;
+        }	
+        
+        	#bestand #d a {
+         background-color: #E4CB00;
+         background: #066; 
+          cursor: default;
+        }	
+        
+        	#logisConfig #e a {
+         background-color: #E4CB00;
+        background: #066; 
+          cursor: default;
+        }	
+        
+        	#scheduler #f a {
+         background-color: #E4CB00;
+        background: #066; 
+          cursor: default;
+        }	
+
+        #menuebene{
+        visibility: visible;
+        position:absolute;
+         width: 100%;
+        z-index:6;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+        }

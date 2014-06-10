@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="mein.jsf.CompanyCompany" table="company">
+    <id column="id" name="id" type="int">
+      <generator class="increment"/>
+    </id>
+    <property name="name">
+      <column name="name"/>
+    </property>
+    <property name="legalform">
+      <column name="legalform"/>
+    </property>
+      <property name="ceo">
+      <column name="ceo"/>
+    </property>
+      <property name="headquater">
+      <column name="headquater"/>
+    </property>
+      <property name="industry">
+      <column name="industry"/>
+    </property>
+    <property name="website">
+        <column name="website"></column>
+        </property>
+  </class>
+  <!--<class name="mein.jsf.Department" table="department" >
+  <id column="id" name="id" type="int">
+    <generator class="increment"/>
+  </id>    
+  <property name="name">
+  <column name="name"></column>    
+  </property>
+  <property name="employees" >
+  <column name="employees" ></column>    
+  </property>
+  </class><!-  <class name="mein.jsf.Employee" table="employee">
+      <id column="id" name="id" type="int">
+             <generator class="increment"/>
+          </id>
+          
+          <property name="name">
+          <column name="name"/>    
+          </property>
+          
+          <property name="age">
+          <column name="age"/>    
+          </property>
+          
+          <property name="department">
+          <column name="department"/>    
+          </property>
+          
+          </class>-->
+</hibernate-mapping>

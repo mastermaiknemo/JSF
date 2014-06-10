@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="primeFaces.xhtml" x="347" y="202" zoom="false"/>
+        <Node id="index.html" x="319" y="133" zoom="true"/>
+        <Node id="inRulex.xhtml" x="89" y="204" zoom="false"/>
+        <Node id="configAction.xhtml" x="205" y="203" zoom="true"/>
+        <Node id="logisConfig.xhtml" x="487" y="202" zoom="true"/>
+        <Node id="scheduler.xhtml" x="624" y="202" zoom="true"/>
+        <Node id="images/template/menuface.xhtml" x="250" y="41" zoom="false"/>
+        <Node id="numberRange.xhtml" x="-61" y="205" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
